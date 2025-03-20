@@ -1,0 +1,103 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <!-- Charset Declaration -->
+    <meta charset="UTF-8">  
+    <!-- Page description for Help Desk Appointment Form -->
+    <meta name="description" content="Help Desk Appointment Form">  
+    <!-- Keywords for Help Desk Appointment Form -->
+    <meta name="keywords" content="CWA, Help Desk, Appointment">  
+    <!-- Author Information -->
+    <meta name="author" content="Denura"> 
+    <!-- Page Title (tab bar text) --> 
+    <title>CWA Help Desk Appointment</title>
+    
+</head>  
+<body>
+    <!-- Link / hyperlink --> 
+    <a href="https://www.swin.edu.au/">
+        <!-- Image with caption -->
+       <img src="C:\Users\Ibrah\Downloads\lab03-1\logo.png" alt="Help Desk Logo">
+    </a>
+
+    <!-- Headling 1 -->
+    <h1>CWA Help Desk Appointment</h1>
+    <!--paragraphs -->  
+    <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday Check Blackboard for when CWA tutors will be there.</p>
+
+    <form action="submit.php" method="post">
+        <fieldset> 
+            <legend>Student Details</legend> 
+            <!-- student ID --> 
+            <label for="studentID">Student ID:</label>  
+            <input type="text" id="studentID" name="studentID" required pattern="\d{7,10}" placeholder="Enter 7-10 digits"><br>  
+
+            <!-- Given name-->
+            <label for="givenName">Given Name:</label>  
+            <input type="text" id="givenName" name="givenName" required maxlength="15" pattern="[A-Za-z]+" placeholder="Enter your given name">  
+
+            <!-- Family name-->
+            <label for="familyname">Family Name:</label>  
+            <input type="text" id="familyname" name="familyname" required maxlength="15" pattern="[A-Za-z]+" placeholder="Enter your family name"><br> 
+        </fieldset>
+
+        <fieldset>  
+            <legend>Your Unit </legend>
+            <!-- Unit -->  
+            <input type="radio" id="unit1" name="unit" required>  
+            <label for= "unit1">COS10011</label>
+            <input type="radio" id="unit2" name="unit">
+            <label for= "unit2">COS60004</label> 
+            <input type="radio" id="unit3" name="unit">
+            <label for= "unit3">COS60007</label><br>  
+
+            <!-- Your tutor -->
+            <label for="tutor">Your Tutor:</label>  
+            <select id="tutor" name="tutor" required>  
+                <option value="">Please Select</option>  
+                <option value="tutor1">Tutor Name 1</option>  
+                <option value="tutor2">Tutor Name 2</option>  
+                <option value="tutor3">Tutor Name 3</option>  
+            </select>  
+        </fieldset>
+
+        <fieldset>  
+            <legend>Issue</legend> 
+            <!-- issue--> 
+            <label for="html">HTML:</label>  
+            <input type="checkbox" id="html" name="issue" value="HTML" required>   
+            <label for="css">CSS:</label>  
+            <input type="checkbox" id="css" name="issue" value="CSS">   
+            <label for="javascript">JavaScript:</label>  
+            <input type="checkbox" id="javascript" name="issue" value="JavaScript">   
+            <label for="php">PHP:</label>  
+            <input type="checkbox" id="php" name="issue" value="PHP">   
+            <label for="mysql">MySQL:</label>  
+            <input type="checkbox" id="mysql" name="issue" value="MySQL"><br>
+
+            <!-- Description of issue-->
+            <label for="description">Description of Issue:</label><br>  
+            <textarea id="description" name="description" rows="4" cols="50" placeholder="Write description of your problem here..." required></textarea><br>
+        </fieldset>
+
+        <fieldset>  
+            <legend>Preferred Date / Time</legend>
+            <!-- Date (Date picker)-->  
+            <label for="date">Date:</label>  
+            <input type="date" id="date" name="date" required><br> 
+            <!-- Time (Time picker)--> 
+            <label for="time">Time:</label>  
+            <input type="time" id="time" name="time" required ><br>  
+        </fieldset>
+
+        <!--submit button-->
+        <input type="submit" value="Book">
+        <!-- reset button-->  
+        <input type="reset" value="Reset form"> 
+
+        
+
+    </form>
+</body>
+
+</html>
